@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "glowcubes",
+  "version": "${version}",
+  "name": "Glow Cubes",
+  "description": "Decorative full-block light sources in all 16 dye colors plus undyed — bright glowing cubes for building and lighting.",
+  "authors": [
+    "Kestalkayden"
+  ],
+  "contact": {
+    "homepage": "https://github.com/kestalkayden/glow-cubes",
+    "sources": "https://github.com/kestalkayden/glow-cubes",
+    "issues": "https://github.com/kestalkayden/glow-cubes/issues"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kestalkayden.glowcubes.GlowcubesFabric"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "fabric-api": "*",
+    "minecraft": "26.2",
+    "java": ">=25"
+  }
+}

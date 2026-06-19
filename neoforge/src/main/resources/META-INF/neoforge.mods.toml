@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+issueTrackerURL="https://github.com/kestalkayden/glow-cubes/issues"
+
+[[mods]]
+modId="glowcubes"
+version="${version}"
+displayName="Glow Cubes"
+description='''
+Decorative full-block light sources in all 16 dye colors plus undyed — bright glowing cubes for building and lighting.
+'''
+authors="Kestalkayden"
+displayURL="https://github.com/kestalkayden/glow-cubes"
+
+[[dependencies.glowcubes]]
+modId="neoforge"
+type="required"
+versionRange="[26.2.0.0-beta,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.glowcubes]]
+modId="minecraft"
+type="required"
+versionRange="[26.2,26.3)"
+ordering="NONE"
+side="BOTH"

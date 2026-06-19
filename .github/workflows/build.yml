@@ -1,0 +1,49 @@
+name: build
+
+# Build-only CI for the private/test phase: compiles both loaders + the common purity check on
+# every push and PR, and uploads the jars as artifacts. No publishing yet.
+#
+# To enable releases later (when the Modrinth/CurseForge projects exist and the repo has the
+# MODRINTH_TOKEN / CURSEFORGE_TOKEN secrets), copy the `plan` + `publish-*` jobs from a published
+# fleet mod (e.g. capture-net / double-doors-lite) and wire in this mod's project IDs. Tag pushes
+# (v*) will then publish.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  build-fabric:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+      - uses: gradle/actions/wrapper-validation@v6
+      - run: chmod +x ./gradlew
+      - run: ./gradlew :fabric:build --stacktrace
+      - uses: actions/upload-artifact@v7
+        with:
+          name: fabric-jars
+          path: fabric/build/libs/*.jar
+          if-no-files-found: error
+
+  build-neoforge:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+      - uses: gradle/actions/wrapper-validation@v6
+      - run: chmod +x ./gradlew
+      # :common:build is the platform-agnostic purity gate (rides with the NeoForge toolchain).
+      - run: ./gradlew :neoforge:build :common:build --stacktrace
+      - uses: actions/upload-artifact@v7
+        with:
+          name: neoforge-jars
+          path: neoforge/build/libs/*.jar
+          if-no-files-found: error

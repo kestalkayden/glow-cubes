@@ -1,0 +1,21 @@
+{
+  "itemGroup.glowcubes.glowcubes": "Glow Cubes",
+
+  "block.glowcubes.glowcube": "Glowcube",
+  "block.glowcubes.white_glowcube": "White Glowcube",
+  "block.glowcubes.orange_glowcube": "Orange Glowcube",
+  "block.glowcubes.magenta_glowcube": "Magenta Glowcube",
+  "block.glowcubes.light_blue_glowcube": "Light Blue Glowcube",
+  "block.glowcubes.yellow_glowcube": "Yellow Glowcube",
+  "block.glowcubes.lime_glowcube": "Lime Glowcube",
+  "block.glowcubes.pink_glowcube": "Pink Glowcube",
+  "block.glowcubes.gray_glowcube": "Gray Glowcube",
+  "block.glowcubes.light_gray_glowcube": "Light Gray Glowcube",
+  "block.glowcubes.cyan_glowcube": "Cyan Glowcube",
+  "block.glowcubes.purple_glowcube": "Purple Glowcube",
+  "block.glowcubes.blue_glowcube": "Blue Glowcube",
+  "block.glowcubes.brown_glowcube": "Brown Glowcube",
+  "block.glowcubes.green_glowcube": "Green Glowcube",
+  "block.glowcubes.red_glowcube": "Red Glowcube",
+  "block.glowcubes.black_glowcube": "Black Glowcube"
+}

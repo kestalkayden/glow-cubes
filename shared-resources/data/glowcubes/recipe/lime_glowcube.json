@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#glowcubes:glowcubes",
+    "minecraft:lime_dye"
+  ],
+  "result": {
+    "id": "glowcubes:lime_glowcube"
+  }
+}

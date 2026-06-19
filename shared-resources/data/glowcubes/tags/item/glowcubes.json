@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "glowcubes:glowcube",
+    "glowcubes:white_glowcube",
+    "glowcubes:orange_glowcube",
+    "glowcubes:magenta_glowcube",
+    "glowcubes:light_blue_glowcube",
+    "glowcubes:yellow_glowcube",
+    "glowcubes:lime_glowcube",
+    "glowcubes:pink_glowcube",
+    "glowcubes:gray_glowcube",
+    "glowcubes:light_gray_glowcube",
+    "glowcubes:cyan_glowcube",
+    "glowcubes:purple_glowcube",
+    "glowcubes:blue_glowcube",
+    "glowcubes:brown_glowcube",
+    "glowcubes:green_glowcube",
+    "glowcubes:red_glowcube",
+    "glowcubes:black_glowcube"
+  ]
+}

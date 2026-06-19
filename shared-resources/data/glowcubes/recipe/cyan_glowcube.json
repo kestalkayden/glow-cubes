@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "#glowcubes:glowcubes",
+    "minecraft:cyan_dye"
+  ],
+  "result": {
+    "id": "glowcubes:cyan_glowcube"
+  }
+}

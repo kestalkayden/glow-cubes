@@ -1,7 +1,7 @@
 # Glow Cubes
 
 **Bright, full-block light sources in every dye color.** A small decorative-block mod for Fabric and
-NeoForge on Minecraft 26.2.
+NeoForge on Minecraft 26.1.
 
 ## What it adds
 
@@ -15,10 +15,10 @@ colorful building blocks.
 
 ## Requirements
 
-- Minecraft **26.2**
+- Minecraft **26.1.x**
 - Java **25+**
 - **Fabric:** Fabric Loader 0.18.4+, Fabric API
-- **NeoForge:** 26.2.0.0-beta+
+- **NeoForge:** 26.1.2.55-beta+
 
 ## Building from source
 

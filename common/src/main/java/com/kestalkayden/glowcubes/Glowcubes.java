@@ -18,6 +18,9 @@ public final class Glowcubes {
 
     public static final String MOD_ID = "glowcubes";
 
+    /** Which glowcube is the creative-tab icon — pink stands out more than the pale undyed base. */
+    public static final String ICON_NAME = "pink_glowcube";
+
     private Glowcubes() {}
 
     /** The 17 glowcube registry/asset names in creative-tab order: the undyed base, then DyeColor

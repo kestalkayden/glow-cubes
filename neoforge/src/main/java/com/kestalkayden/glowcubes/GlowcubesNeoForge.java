@@ -26,7 +26,7 @@ public final class GlowcubesNeoForge {
         // no-arg replacement in 26.2; modded tabs are appended regardless of the row/column.
         () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .title(Component.translatable("itemGroup.glowcubes.glowcubes"))
-            .icon(() -> new ItemStack(GlowcubesBlocks.GLOWCUBE_ITEMS.get(0).get()))
+            .icon(() -> new ItemStack(GlowcubesBlocks.ICON_ITEM.get()))
             .displayItems((params, output) -> {
                 for (var item : GlowcubesBlocks.GLOWCUBE_ITEMS) output.accept(item.get());
             })

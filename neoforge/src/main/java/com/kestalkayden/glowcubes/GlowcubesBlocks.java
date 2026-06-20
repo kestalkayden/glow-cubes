@@ -21,6 +21,10 @@ public final class GlowcubesBlocks {
     /** All 17 glowcube block-items in creative-tab order. The static initialiser runs when this class
      *  is first referenced (the entrypoint touches BLOCKS before registering it to the mod bus). */
     public static final List<DeferredItem<BlockItem>> GLOWCUBE_ITEMS = new ArrayList<>();
+
+    /** The {@link Glowcubes#ICON_NAME} glowcube, used as the creative-tab icon. Set during registration. */
+    public static DeferredItem<BlockItem> ICON_ITEM;
+
     static {
         for (String name : Glowcubes.names()) {
             registerGlowcube(name);
@@ -32,8 +36,10 @@ public final class GlowcubesBlocks {
     private static void registerGlowcube(String name) {
         DeferredBlock<Block> block = BLOCKS.register(name, id ->
             new Block(Glowcubes.properties().setId(ResourceKey.create(Registries.BLOCK, id))));
-        GLOWCUBE_ITEMS.add(ITEMS.register(name, id ->
+        DeferredItem<BlockItem> item = ITEMS.register(name, id ->
             new BlockItem(block.get(),
-                new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).useBlockDescriptionPrefix())));
+                new Item.Properties().setId(ResourceKey.create(Registries.ITEM, id)).useBlockDescriptionPrefix()));
+        GLOWCUBE_ITEMS.add(item);
+        if (name.equals(Glowcubes.ICON_NAME)) ICON_ITEM = item;
     }
 }

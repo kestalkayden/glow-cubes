@@ -18,6 +18,9 @@ public final class GlowcubesBlocks {
     /** All 17 glowcube block-items in creative-tab order — populated by {@link #register()}. */
     public static final List<BlockItem> GLOWCUBE_ITEMS = new ArrayList<>();
 
+    /** The {@link Glowcubes#ICON_NAME} glowcube, used as the creative-tab icon. Set during registration. */
+    public static BlockItem ICON_ITEM;
+
     private GlowcubesBlocks() {}
 
     public static void register() {
@@ -33,7 +36,9 @@ public final class GlowcubesBlocks {
             new Block(Glowcubes.properties().setId(blockKey)));
 
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
-        GLOWCUBE_ITEMS.add(Registry.register(BuiltInRegistries.ITEM, id,
-            new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix())));
+        BlockItem item = Registry.register(BuiltInRegistries.ITEM, id,
+            new BlockItem(block, new Item.Properties().setId(itemKey).useBlockDescriptionPrefix()));
+        GLOWCUBE_ITEMS.add(item);
+        if (name.equals(Glowcubes.ICON_NAME)) ICON_ITEM = item;
     }
 }

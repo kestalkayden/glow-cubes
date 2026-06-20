@@ -27,7 +27,7 @@ public class GlowcubesFabric implements ModInitializer {
             // no no-arg replacement in 26.2; modded tabs are appended regardless of the row/column.
             CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                 .title(Component.translatable("itemGroup.glowcubes.glowcubes"))
-                .icon(() -> new ItemStack(GlowcubesBlocks.GLOWCUBE_ITEMS.get(0)))
+                .icon(() -> new ItemStack(GlowcubesBlocks.ICON_ITEM))
                 .displayItems((params, output) -> {
                     for (var item : GlowcubesBlocks.GLOWCUBE_ITEMS) output.accept(item);
                 })
